@@ -16,9 +16,9 @@ period=10
 
 #DATA PREPARATION #################################################################################
 print("DATA PREPARATION STAGE ...")
-train_path = "../data/IOB2_train.txt"
-valid_path = "../data/IOB2_valid.txt"
-test_path = "../data/IOB2_test.txt"
+train_path = "../KazNERD/IOB2_train.txt"
+valid_path = "../KazNERD/IOB2_valid.txt"
+test_path = "../KazNERD/IOB2_test.txt"
 
 train_sents = list()
 valid_sents = list()
