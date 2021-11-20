@@ -1,4 +1,4 @@
-import os 
+import os, sys
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID" 
 #gpu="0,1,2,3"
 gpu="0"
@@ -11,6 +11,16 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, Trainin
 from transformers import DataCollatorForTokenClassification
 from datasets import load_dataset, load_metric
 
+if len(sys.argv) < 2 or sys.argv[1].lower() == 'bert':
+    print("Using BERT model")
+    model_checkpoint = "bert-base-multilingual-cased" 
+elif sys.argv[1].lower() == 'roberta':
+    print("Using XLM-RoBERTa model")
+    model_checkpoint = "xlm-roberta-large"
+else:
+    print("Usage example:\n python run_finetune_kaznerd.py bert")
+    exit()
+
 
 #print(transformers.__version__)
 batch_size = 64
@@ -20,8 +30,6 @@ epochs = 10
 warmup_steps = 800
 seed = 1
 
-#model_checkpoint = "bert-base-multilingual-cased"  #uncomment this to use BERT
-model_checkpoint = "xlm-roberta-large"  #uncomment this to use XLM-RoBERTa
 
 def tokenize_and_align_labels(examples, tokenizer, task, label_all_tokens=False):
     tokenized_inputs = tokenizer(examples["tokens"], truncation=True,
