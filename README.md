@@ -1,9 +1,9 @@
 # Kazakh Named Entity Recognition
 This repository contains an open-source Kazakh named entity recognition dataset (KazNERD), named entity annotation guidelines (in Kazakh), and NER model training codes (CRF, BiLSTM-CNN-CRF, BERT and XLM-RoBERTa).
-- [KazNERD Corpus](KazNerd)
-- [Annotation Guideline](guide)
-- [NER Models](models)
-- [Citation](cite)
+- [KazNERD Corpus](#KazNerd)
+- [Annotation Guideline](#guide)
+- [NER Models](#models)
+- [Citation](#cite)
 
 ## KazNERD Corpus <a name="KazNerd"></a>
 KazNERD contains 112,702 sentences, extracted from the television news text, and 136,333 annotations for 25 entity classes.
