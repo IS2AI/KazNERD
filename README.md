@@ -27,7 +27,7 @@ Create conda environment and install dependencies as follows:
 ```
 $ conda create --name <env> --file requirements.txt
 ```
-where `<env>` will be used as a name of created conda environment, replace _<env>_ with any string (e.g., *kaznerd*).
+where `<env>` will be used as a name of created conda environment, replace `<env>` with any string (e.g., *kaznerd*).
   
 ### Run CRF 
 ```bash
