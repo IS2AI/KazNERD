@@ -1,20 +1,23 @@
 # Kazakh Named Entity Recognition
 This repository contains an open-source Kazakh named entity recognition dataset (KazNERD), named entity annotation guidelines (in Kazakh), and NER model training codes (CRF, BiLSTM-CNN-CRF, BERT and XLM-RoBERTa).
+- [KazNERD Corpus](KazNerd)
+- [Annotation Guideline](guide)
+- [NER Models](models)
+- [Citation](cite)
 
-
-## KazNERD Corpus
+## KazNERD Corpus <a name="KazNerd"></a>
 KazNERD contains 112,702 sentences, extracted from the television news text, and 136,333 annotations for 25 entity classes.
 All sentences in the dataset were manually annotated by two native Kazakh-speaking linguists, supervised by ISSAI's scientist.
 The IOB2 scheme was used for annotation.
 The dataset, in CoNLL 2002 format, is located [here](KazNERD).
 
 
-## Annotation Guideline
+## Annotation Guideline <a name="guide"></a>
 The annotation guideline for 25 named entity classes is located here.
 The guideline is written in Kazakh language.
 
 
-## NER Models
+## NER Models <a name="models"></a>
 
 ### Setup Conda Environment
 The NER training codes are based on **PyTorch 1.7.1** and **Python 3.8**.
@@ -50,7 +53,7 @@ $ cd bert
 $ python run_finetune_kaznerd.py roberta
 ```
 
-## Citation
+## Citation <a name="cite"></a>
 
 ```bibtex
 @inproceedings{
