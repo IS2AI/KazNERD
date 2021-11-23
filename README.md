@@ -1,27 +1,27 @@
 # Kazakh Named Entity Recognition
 This repository contains an open-source Kazakh named entity recognition dataset (KazNERD), named entity annotation guidelines (in Kazakh), and NER model training codes (CRF, BiLSTM-CNN-CRF, BERT and XLM-RoBERTa).
-- [KazNERD Corpus](#KazNerd)
-- [Annotation Guideline](#guide)
-- [NER Models](#models)
-  - [CRF](#crf)
-  - [BiLSTM-CNN-CRF](#lstm)
-  - [BERT and XLM-RoBERTa](#bert)
-- [Citation](#cite)
+1. [KazNERD Corpus](#KazNerd)
+2. [Annotation Guideline](#guide)
+3. [NER Models](#models)
+    1. [CRF](#crf)
+    2. [BiLSTM-CNN-CRF](#lstm)
+    3. [BERT and XLM-RoBERTa](#bert)
+4. [Citation](#cite)
 
-# KazNERD Corpus <a name="KazNerd"></a>
+# 1. KazNERD Corpus <a name="KazNerd"></a>
 KazNERD contains 112,702 sentences, extracted from the television news text, and 136,333 annotations for 25 entity classes.
 All sentences in the dataset were manually annotated by two native Kazakh-speaking linguists, supervised by ISSAI's scientist.
 The IOB2 scheme was used for annotation.
 The dataset, in CoNLL 2002 format, is located [here](KazNERD).
 
 
-# Annotation Guideline <a name="guide"></a>
+# 2. Annotation Guideline <a name="guide"></a>
 The annotation guideline for 25 named entity classes is located here.
 The guideline is written in Kazakh language.
 
 
-# NER Models <a name="models"></a>
-## CRF <a name="crf"></a>
+# 3. NER Models <a name="models"></a>
+## 3.1 CRF <a name="crf"></a>
 ### Setup Conda Environment for CRF
 The CRF-based NER model training codes are based on **Python 3.8**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
@@ -39,7 +39,7 @@ $ python runCRF_KazNERD.py
 ```
 
 
-## BiLSTM-CNN-CRF <a name="lstm"></a>
+## 3.2 BiLSTM-CNN-CRF <a name="lstm"></a>
 ### Setup Conda Environment for BiLSTM-CNN-CRF
 The BiLSTM-CNN-CRF-based NER model training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
@@ -59,7 +59,7 @@ $ cd BiLSTM_CNN_CRF
 $ bash run_train_p.sh
 ```
 
-## BERT and XLM-RoBERTa <a name="bert"></a>
+## 3.3 BERT and XLM-RoBERTa <a name="bert"></a>
 ### Setup Conda Environment for BERT and XLM-RoBERTa
 The BERT- and XLM-RoBERTa-based NER models training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
@@ -88,7 +88,7 @@ $ cd bert
 $ python run_finetune_kaznerd.py roberta
 ```
 
-# Citation <a name="cite"></a>
+# 4. Citation <a name="cite"></a>
 
 ```bibtex
 @inproceedings{
