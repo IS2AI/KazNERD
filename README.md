@@ -29,7 +29,18 @@ $ conda create --name <env> --file requirements.txt
 ```
 where `<env>` will be used as a name of created conda environment, replace `<env>` with any string (e.g., *kaznerd*).
   
-### Run CRF 
+### CRF 
+
+#### Setup Conda Environment for CRF
+The CRF-based NER model training codes are based on **Python 3.8**.
+To ease the experiment replication experience, we recommend to setup **Conda** environment. 
+```bash
+conda create --name knerd python=3.8
+conda install -c anaconda nltk scikit-learn
+conda install -c conda-forge sklearn-crfsuite seqeval
+```
+
+#### Start CRF training
 ```bash
 $ cd crf
 $ python runCRF_KazNERD.py
