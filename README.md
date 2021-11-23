@@ -35,7 +35,7 @@ where `<env>` will be used as a name of created conda environment, replace `<env
 The CRF-based NER model training codes are based on **Python 3.8**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
 ```bash
-conda create --name knerd python=3.8
+conda create --name knerdCRF python=3.8
 conda install -c anaconda nltk scikit-learn
 conda install -c conda-forge sklearn-crfsuite seqeval
 ```
@@ -47,12 +47,24 @@ $ python runCRF_KazNERD.py
 ```
 
 ### Run BiLSTM-CNN-CRF
+#### Setup Conda Environment for BiLSTM-CNN-CRF
+The BiLSTM-CNN-CRF-based NER model training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
+To ease the experiment replication experience, we recommend to setup **Conda** environment. 
+```bash
+conda create --name knerdLSTM python=3.8
+# Check https://pytorch.org/get-started/previous-versions/#v171
+# to install a PyTorch version suitable for your OS and CUDA
+# or feel free to adapt the code to newer PyTorch version
+conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch # we used this version
+```
+
 ```bash
 $ cd BiLSTM_CNN_CRF
 $ bash run_train_p.sh
 ```
 
 ### Run BERT
+
 ```bash
 $ cd bert
 $ python run_finetune_kaznerd.py bert
