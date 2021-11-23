@@ -18,7 +18,6 @@ The guideline is written in Kazakh language.
 
 
 ## NER Models <a name="models"></a>
-
 ### Setup Conda Environment
 The NER training codes are based on **PyTorch 1.7.1** and **Python 3.8**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
@@ -29,8 +28,8 @@ $ conda create --name <env> --file requirements.txt
 ```
 where `<env>` will be used as a name of created conda environment, replace `<env>` with any string (e.g., *kaznerd*).
   
+  
 ### CRF 
-
 #### Setup Conda Environment for CRF
 The CRF-based NER model training codes are based on **Python 3.8**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
@@ -46,7 +45,8 @@ $ cd crf
 $ python runCRF_KazNERD.py
 ```
 
-### Run BiLSTM-CNN-CRF
+
+### BiLSTM-CNN-CRF
 #### Setup Conda Environment for BiLSTM-CNN-CRF
 The BiLSTM-CNN-CRF-based NER model training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
@@ -56,21 +56,37 @@ conda create --name knerdLSTM python=3.8
 # to install a PyTorch version suitable for your OS and CUDA
 # or feel free to adapt the code to newer PyTorch version
 conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch # we used this version
+conda install -c conda-forge tqdm seqeval
 ```
 
+#### Start BiLSTM-CNN-CRF training
 ```bash
 $ cd BiLSTM_CNN_CRF
 $ bash run_train_p.sh
 ```
 
-### Run BERT
+## BERT and RoBERTa
+#### Setup Conda Environment for BERT and RoBERTa
+The BERT- and RoBERTa-based NER models training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
+To ease the experiment replication experience, we recommend to setup **Conda** environment. 
+```bash
+conda create --name knerdBERT python=3.8
+# Check https://pytorch.org/get-started/previous-versions/#v171
+# to install a PyTorch version suitable for your OS and CUDA
+# or feel free to adapt the code to newer PyTorch version
+conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch # we used this version
+conda install -c anaconda numpy
+conda install -c conda-forge seqeval
+conda install -c huggingface transformers
+```
 
+#### Start BERT training
 ```bash
 $ cd bert
 $ python run_finetune_kaznerd.py bert
 ```
 
-### Run XLM-RoBERTa
+### Start XLM-RoBERTa training
 ```bash
 $ cd bert
 $ python run_finetune_kaznerd.py roberta
