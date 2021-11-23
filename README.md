@@ -18,23 +18,13 @@ The guideline is written in Kazakh language.
 
 
 ## NER Models <a name="models"></a>
-### Setup Conda Environment
-The NER training codes are based on **PyTorch 1.7.1** and **Python 3.8**.
-To ease the experiment replication experience, we recommend to setup **Conda** environment. 
-
-Create conda environment and install dependencies as follows:
-```
-$ conda create --name <env> --file requirements.txt
-```
-where `<env>` will be used as a name of created conda environment, replace `<env>` with any string (e.g., *kaznerd*).
-  
-  
 ### CRF 
 #### Setup Conda Environment for CRF
 The CRF-based NER model training codes are based on **Python 3.8**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
 ```bash
 conda create --name knerdCRF python=3.8
+conda activate knerdCRF
 conda install -c anaconda nltk scikit-learn
 conda install -c conda-forge sklearn-crfsuite seqeval
 ```
@@ -52,10 +42,11 @@ The BiLSTM-CNN-CRF-based NER model training codes are based on **Python 3.8** an
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
 ```bash
 conda create --name knerdLSTM python=3.8
+conda activate knerdLSTM
 # Check https://pytorch.org/get-started/previous-versions/#v171
 # to install a PyTorch version suitable for your OS and CUDA
 # or feel free to adapt the code to newer PyTorch version
-conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch # we used this version
+conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch   # we used this version
 conda install -c conda-forge tqdm seqeval
 ```
 
@@ -65,19 +56,21 @@ $ cd BiLSTM_CNN_CRF
 $ bash run_train_p.sh
 ```
 
-## BERT and RoBERTa
-#### Setup Conda Environment for BERT and RoBERTa
-The BERT- and RoBERTa-based NER models training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
+### BERT and XLM-RoBERTa
+#### Setup Conda Environment for BERT and XLM-RoBERTa
+The BERT- and XLM-RoBERTa-based NER models training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
 To ease the experiment replication experience, we recommend to setup **Conda** environment. 
 ```bash
 conda create --name knerdBERT python=3.8
+conda activate knerdBERT
 # Check https://pytorch.org/get-started/previous-versions/#v171
 # to install a PyTorch version suitable for your OS and CUDA
 # or feel free to adapt the code to newer PyTorch version
-conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch # we used this version
+conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch   # we used this version
 conda install -c anaconda numpy
 conda install -c conda-forge seqeval
-conda install -c huggingface transformers
+pip install transformers
+pip install datasets
 ```
 
 #### Start BERT training
@@ -86,7 +79,7 @@ $ cd bert
 $ python run_finetune_kaznerd.py bert
 ```
 
-### Start XLM-RoBERTa training
+#### Start XLM-RoBERTa training
 ```bash
 $ cd bert
 $ python run_finetune_kaznerd.py roberta
