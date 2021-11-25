@@ -14,22 +14,27 @@ from datasets import load_dataset, load_metric
 if len(sys.argv) < 2 or sys.argv[1].lower() == 'bert':
     print("Using BERT model")
     model_checkpoint = "bert-base-multilingual-cased" 
+    batch_size = 128
+    learning_rate = 5e-5
+    weight_decay = 0.0001
+    epochs = 8
+    warmup_steps = 3000
+    seed = 1
 elif sys.argv[1].lower() == 'roberta':
     print("Using XLM-RoBERTa model")
     model_checkpoint = "xlm-roberta-large"
+    batch_size = 64
+    learning_rate = 1e-5
+    weight_decay = 0.001
+    epochs = 10
+    warmup_steps = 800
+    seed = 1
 else:
     print("Usage example:\n python run_finetune_kaznerd.py bert")
     exit()
 
 
 #print(transformers.__version__)
-batch_size = 64
-learning_rate = 1e-5
-weight_decay = 0.001
-epochs = 10
-warmup_steps = 800
-seed = 1
-
 
 def tokenize_and_align_labels(examples, tokenizer, task, label_all_tokens=False):
     tokenized_inputs = tokenizer(examples["tokens"], truncation=True,
