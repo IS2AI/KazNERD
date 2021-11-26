@@ -48,7 +48,7 @@ conda create --name knerdLSTM python=3.8
 conda activate knerdLSTM
 # Check https://pytorch.org/get-started/previous-versions/#v171
 # to install a PyTorch version suitable for your OS and CUDA
-# or feel free to adapt the code to newer PyTorch version
+# or feel free to adapt the code to a newer PyTorch version
 conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch   # we used this version
 conda install -c conda-forge tqdm seqeval
 ```
@@ -68,7 +68,7 @@ conda create --name knerdBERT python=3.8
 conda activate knerdBERT
 # Check https://pytorch.org/get-started/previous-versions/#v171
 # to install a PyTorch version suitable for your OS and CUDA
-# or feel free to adapt the code to newer PyTorch version
+# or feel free to adapt the code to a newer PyTorch version
 conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch   # we used this version
 conda install -c anaconda numpy
 conda install -c conda-forge seqeval
