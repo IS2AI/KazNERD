@@ -16,8 +16,7 @@ The dataset, in CoNLL 2002 format, is located [here](KazNERD).
 
 
 # 2. Annotation Guidelines <a name="guide"></a>
-The guidelines are in the Kazakh language.
-The annotation guidelines for 25 named entity classes are located [here](Annotation_guidelines).
+The annotation guidelines followed to build KazNERD are located [here](Annotation_guidelines). The guidelines contain rules for annotating 25 named entity classes and their examples. The guidelines are in the Kazakh language.
 
 
 # 3. NER Models <a name="models"></a>
