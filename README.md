@@ -24,7 +24,7 @@ The guidelines are in the Kazakh language.
 ## 3.1 CRF <a name="crf"></a>
 ### Setup Conda Environment for CRF
 The CRF-based NER model training codes are based on **Python 3.8**.
-To ease the experiment replication experience, we recommend setting up **Conda** environment. 
+To ease the experiment replication experience, we recommend setting up a **Conda** environment. 
 ```bash
 conda create --name knerdCRF python=3.8
 conda activate knerdCRF
@@ -42,7 +42,7 @@ $ python runCRF_KazNERD.py
 ## 3.2 BiLSTM-CNN-CRF <a name="lstm"></a>
 ### Setup Conda Environment for BiLSTM-CNN-CRF
 The BiLSTM-CNN-CRF-based NER model training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
-To ease the experiment replication experience, we recommend setting up **Conda** environment. 
+To ease the experiment replication experience, we recommend setting up a **Conda** environment. 
 ```bash
 conda create --name knerdLSTM python=3.8
 conda activate knerdLSTM
@@ -62,7 +62,7 @@ $ bash run_train_p.sh
 ## 3.3 BERT and XLM-RoBERTa <a name="bert"></a>
 ### Setup Conda Environment for BERT and XLM-RoBERTa
 The BERT- and XLM-RoBERTa-based NER models training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
-To ease the experiment replication experience, we recommend setting up **Conda** environment. 
+To ease the experiment replication experience, we recommend setting up a **Conda** environment. 
 ```bash
 conda create --name knerdBERT python=3.8
 conda activate knerdBERT
