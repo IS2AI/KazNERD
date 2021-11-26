@@ -42,7 +42,7 @@ $ python runCRF_KazNERD.py
 ## 3.2 BiLSTM-CNN-CRF <a name="lstm"></a>
 ### Setup Conda Environment for BiLSTM-CNN-CRF
 The BiLSTM-CNN-CRF-based NER model training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
-To ease the experiment replication experience, we recommend to setup **Conda** environment. 
+To ease the experiment replication experience, we recommend setting up **Conda** environment. 
 ```bash
 conda create --name knerdLSTM python=3.8
 conda activate knerdLSTM
