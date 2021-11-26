@@ -10,7 +10,7 @@ This repository contains an open-source Kazakh named entity recognition dataset 
 
 # 1. KazNERD Corpus <a name="KazNerd"></a>
 KazNERD contains 112,702 sentences, extracted from the television news text, and 136,333 annotations for 25 entity classes.
-All sentences in the dataset were manually annotated by two native Kazakh-speaking linguists, supervised by ISSAI's scientist.
+All sentences in the dataset were manually annotated by two native Kazakh-speaking linguists, supervised by an ISSAI researcher.
 The IOB2 scheme was used for annotation.
 The dataset, in CoNLL 2002 format, is located [here](KazNERD).
 
