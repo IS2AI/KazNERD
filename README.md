@@ -15,9 +15,9 @@ The IOB2 scheme was used for annotation.
 The dataset, in CoNLL 2002 format, is located [here](KazNERD).
 
 
-# 2. Annotation Guideline <a name="guide"></a>
-The annotation guideline for 25 named entity classes is located here.
-The guideline is written in Kazakh language.
+# 2. Annotation Guidelines <a name="guide"></a>
+The annotation guidelines for 25 named entity classes are located here.
+The guidelines are in the Kazakh language.
 
 
 # 3. NER Models <a name="models"></a>
