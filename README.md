@@ -1,7 +1,7 @@
 # Kazakh Named Entity Recognition
 This repository contains an open-source Kazakh named entity recognition dataset (KazNERD), named entity annotation guidelines (in Kazakh), and NER model training codes (CRF, BiLSTM-CNN-CRF, BERT and XLM-RoBERTa).
 1. [KazNERD Corpus](#KazNerd)
-2. [Annotation Guideline](#guide)
+2. [Annotation Guidelines](#guide)
 3. [NER Models](#models)
     1. [CRF](#crf)
     2. [BiLSTM-CNN-CRF](#lstm)
