@@ -21,7 +21,7 @@ The annotation guidelines followed to build KazNERD are located [here](Annotatio
 
 # 3. NER Models <a name="models"></a>
 ## 3.1 CRF <a name="crf"></a>
-### Setup Conda Environment for CRF
+### Conda Environment Setup for CRF
 The CRF-based NER model training codes are based on **Python 3.8**.
 To ease the experiment replication experience, we recommend setting up a **Conda** environment. 
 ```bash
@@ -39,7 +39,7 @@ $ python runCRF_KazNERD.py
 
 
 ## 3.2 BiLSTM-CNN-CRF <a name="lstm"></a>
-### Setup Conda Environment for BiLSTM-CNN-CRF
+### Conda Environment Setup for BiLSTM-CNN-CRF
 The BiLSTM-CNN-CRF-based NER model training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
 To ease the experiment replication experience, we recommend setting up a **Conda** environment. 
 ```bash
@@ -59,7 +59,7 @@ $ bash run_train_p.sh
 ```
 
 ## 3.3 BERT and XLM-RoBERTa <a name="bert"></a>
-### Setup Conda Environment for BERT and XLM-RoBERTa
+### Conda Environment Setup for BERT and XLM-RoBERTa
 The BERT- and XLM-RoBERTa-based NER models training codes are based on **Python 3.8** and **PyTorch 1.7.1**.
 To ease the experiment replication experience, we recommend setting up a **Conda** environment. 
 ```bash
