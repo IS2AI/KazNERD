@@ -1,0 +1,9 @@
+*.swp
+__pycache__/
+bert-base-*
+xlm-roberta-*
+*.shuffle
+run_eval.sh
+run_test.sh
+Save_*
+final_log
