@@ -90,6 +90,12 @@ $ python run_finetune_kaznerd.py roberta
 # 4. Citation <a name="cite"></a>
 
 ```bibtex
-@inproceedings{
+@misc{yeshpanov2021kaznerd,
+      title={KazNERD: Kazakh Named Entity Recognition Dataset}, 
+      author={Rustem Yeshpanov and Yerbolat Khassanov and Huseyin Atakan Varol},
+      year={2021},
+      eprint={2111.13419},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
