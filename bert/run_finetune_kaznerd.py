@@ -30,7 +30,8 @@ elif sys.argv[1].lower() == 'roberta':
     warmup_steps = 800
     seed = 1
 else:
-    print("Usage example:\n python run_finetune_kaznerd.py bert")
+    print("Usage example:\n python run_finetune_kaznerd.py model (bert|roberta)\n"
+            "e.g.: python run_finetune_kaznerd.py roberta")
     exit()
 
 

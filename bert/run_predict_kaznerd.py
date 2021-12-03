@@ -11,14 +11,22 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, Trainin
 from transformers import DataCollatorForTokenClassification
 from datasets import load_dataset, load_metric
 
-if len(sys.argv) < 2 or sys.argv[1].lower() == 'bert':
-    print("Usage example:\n python run_predict_kaznerd.py 'kazakh sentence'")
+if len(sys.argv) < 4:
+    print("Usage example:\n python run_predict_kaznerd.py model model_checkpoint 'kazakh sentence'\n"
+            "e.g.: python run_predict_kaznerd.py bert "
+            "bert-base-multilingual-cased-finetuned-ner-6/checkpoint-705/ "
+            "'Кеше Әйгерім Әбдібекова Абайдың «Қара сөздерінің» аудиодискісін 1000 теңгеге алды.'")
     exit()
 else:
-    input_sent = sys.argv[1]
+    model_name = sys.argv[1].lower()
+    if model_name != "bert" and model_name != "roberta":
+        print("Incorrect model name is specified. It should be 'bert' or 'roberta'!")
+        exit()
+    model_checkpoint = sys.argv[2]
+    input_sent = sys.argv[3]
 
 
-model_checkpoint = "bert-base-multilingual-cased-finetuned-ner-6/checkpoint-705"
+#model_checkpoint = "bert-base-multilingual-cased-finetuned-ner-6/checkpoint-705"
 #model_checkpoint = "xlm-roberta-large-finetuned-ner-5/checkpoint-14100"
 
 labels_dict = {0:"O", 1:"B-ADAGE", 2:"I-ADAGE", 3:"B-ART", 4:"I-ART", 5:"B-CARDINAL",
@@ -37,7 +45,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 assert isinstance(tokenizer, transformers.PreTrainedTokenizerFast)
 
 tokenized_inputs = tokenizer(input_sent, return_tensors="pt")
-#tokenizer.convert_ids_to_tokens(tokenized_inputs['input_ids'])
+#tokenizer.convert_ids_to_tokens(tokenized_inputs['input_ids'][0])
 
 #Load model
 model = AutoModelForTokenClassification.from_pretrained(model_checkpoint)
@@ -60,8 +68,10 @@ for i, p in zip(word_ids, predictions[0]):
     previous_word_idx = i
 
 #Print tokens and predicted labels
-input_sent_tokens = re.findall(r"[\w’-]+|[.,#?!\)\(\]\[;:–—\"«№»/%&']", input_sent)
-#pdb.set_trace()
+if model_name == "roberta":
+    input_sent_tokens = tokenizer.decode(tokenized_inputs['input_ids'][0], skip_special_tokens=True).split()
+else:
+    input_sent_tokens = re.findall(r"[\w’-]+|[.,#?!\)\(\]\[;:–—\"«№»/%&']", input_sent)
 assert len(input_sent_tokens) == len(labels), "Mismatch between input token and label sizes!"
 for t,l in zip(input_sent_tokens, labels):
     print(t,l)
