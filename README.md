@@ -87,6 +87,17 @@ $ cd bert
 $ python run_finetune_kaznerd.py roberta
 ```
 
+### Tag a custom sentence
+Once the training is complete, you can use the following script to tag an input sentence:
+```bash
+$ python run_predict_kaznerd.py model model_checkpoint 'kazakh sentence'
+```
+where _model_ is either 'bert' or 'roberta', _model_checkpoint_ is a path to pre-trained model, _'kazakh sentence'_ is an input sentence.
+For example:
+```bash
+$ python run_predict_kaznerd.py bert bert-base-multilingual-cased-finetuned-ner-6/checkpoint-705/ 'Кеше Әйгерім Әбдібекова Абайдың «Қара сөздерінің» аудиодискісін 1000 теңгеге алды.'
+```
+
 # 4. Citation <a name="cite"></a>
 
 ```bibtex
