@@ -71,7 +71,7 @@ for i, p in zip(word_ids, predictions[0]):
 if model_name == "roberta":
     input_sent_tokens = tokenizer.decode(tokenized_inputs['input_ids'][0], skip_special_tokens=True).split()
 else:
-    input_sent_tokens = re.findall(r"[\w’-]+|[.,#?!\)\(\]\[;:–—\"«№»/%&']", input_sent)
+    input_sent_tokens = re.findall(r"[\w’]+|[-.,#?!)(\]\[;:–—\"«№»/%&']", input_sent)
 assert len(input_sent_tokens) == len(labels), "Mismatch between input token and label sizes!"
 for t,l in zip(input_sent_tokens, labels):
     print(t,l)
