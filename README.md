@@ -101,12 +101,18 @@ $ python run_predict_kaznerd.py bert bert-base-multilingual-cased-finetuned-ner-
 # 4. Citation <a name="cite"></a>
 
 ```bibtex
-@misc{yeshpanov2021kaznerd,
-      title={KazNERD: Kazakh Named Entity Recognition Dataset}, 
-      author={Rustem Yeshpanov and Yerbolat Khassanov and Huseyin Atakan Varol},
-      year={2021},
-      eprint={2111.13419},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{yeshpanov-etal-2022-kaznerd,
+    title = "{K}az{NERD}: {K}azakh Named Entity Recognition Dataset",
+    author = "Yeshpanov, Rustem  and
+      Khassanov, Yerbolat  and
+      Varol, Huseyin Atakan",
+    booktitle = "Proceedings of the Thirteenth Language Resources and Evaluation Conference",
+    month = jun,
+    year = "2022",
+    address = "Marseille, France",
+    publisher = "European Language Resources Association",
+    url = "https://aclanthology.org/2022.lrec-1.44",
+    pages = "417--426",
+    abstract = "We present the development of a dataset for Kazakh named entity recognition. The dataset was built as there is a clear need for publicly available annotated corpora in Kazakh, as well as annotation guidelines containing straightforward{---}but rigorous{---}rules and examples. The dataset annotation, based on the IOB2 scheme, was carried out on television news text by two native Kazakh speakers under the supervision of the first author. The resulting dataset contains 112,702 sentences and 136,333 annotations for 25 entity classes. State-of-the-art machine learning models to automatise Kazakh named entity recognition were also built, with the best-performing model achieving an exact match F1-score of 97.22{\%} on the test set. The annotated dataset, guidelines, and codes used to train the models are freely available for download under the CC BY 4.0 licence from https://github.com/IS2AI/KazNERD.",
 }
 ```
