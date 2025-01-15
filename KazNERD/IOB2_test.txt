@@ -7654,7 +7654,7 @@ Sachs I-ORGANISATION
 шешімін O
 тауып O
 , O
-халыкпен O
+халықпен O
 екіге B-CARDINAL
 жұмыс O
 істеу O
@@ -7670,7 +7670,7 @@ Sachs I-ORGANISATION
 шешімін O
 тауып O
 , O
-халыкпен O
+халықпен O
 2-ге B-CARDINAL
 жұмыс O
 істеу O
